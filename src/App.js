@@ -1,28 +1,41 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import injectSheet from "react-jss";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+const App = ({ classes }) => (
+  <div className={classes.App}>
+    <header className={classes.AppHeader}>
+      <p>
+        Edit <code>src/App.js</code> and save to reload.
+      </p>
+      <a
+        className={classes.AppLink}
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn React
+      </a>
+    </header>
+  </div>
+);
+
+const styles = {
+  App: {
+    textAlign: "center"
+  },
+  AppHeader: {
+    backgroundColor: "#282c34",
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "calc(10px + 2vmin)",
+    color: "white"
+  },
+  AppLink: {
+    color: "#61dafb"
   }
-}
+};
 
-export default App;
+export default injectSheet(styles)(App);
