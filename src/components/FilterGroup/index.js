@@ -1,10 +1,10 @@
 import React from "react";
-import injectSheet from "react-jss";
 import startCase from "lodash/startCase";
 
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Grid from "@material-ui/core/Grid";
+import { withStyles } from "@material-ui/core/styles";
 import Switch from "@material-ui/core/Switch";
 
 const FilterGroup = ({ classes, filters, onToggleFilter, type }) => (
@@ -46,4 +46,4 @@ const styles = {
   }
 };
 
-export default injectSheet(styles)(FilterGroup);
+export default withStyles(styles)(FilterGroup);

@@ -1,8 +1,8 @@
 import React from "react";
-import injectSheet from "react-jss";
 import { compose, withState } from "recompose";
 
 import Grid from "@material-ui/core/Grid";
+import { withStyles } from "@material-ui/core/styles";
 
 import Filters from "./components/Filters";
 
@@ -71,6 +71,6 @@ const initialFilters = {
 };
 
 export default compose(
-  injectSheet(styles),
+  withStyles(styles),
   withState("filters", "updateFilters", initialFilters)
 )(App);

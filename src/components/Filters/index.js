@@ -1,8 +1,8 @@
 import React from "react";
-import injectSheet from "react-jss";
 import { compose, withHandlers } from "recompose";
 
 import Grid from "@material-ui/core/Grid";
+import { withStyles } from "@material-ui/core/styles";
 
 import FilterGroup from "../FilterGroup";
 
@@ -56,6 +56,6 @@ const handlers = {
 };
 
 export default compose(
-  injectSheet(styles),
+  withStyles(styles),
   withHandlers(handlers)
 )(Filters);
