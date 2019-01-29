@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 
 import Filters from "./components/Filters";
+import ResultsTable from "./components/ResultsTable";
 
 const App = ({ classes, filters, updateFilters }) => (
   <Grid
@@ -18,9 +19,7 @@ const App = ({ classes, filters, updateFilters }) => (
       <p>OzPoints</p>
     </Grid>
     <Filters filters={filters} updateFilters={updateFilters} />
-    <Grid component="section" className={classes.results}>
-      <p>Results</p>
-    </Grid>
+    <ResultsTable filters={filters} updateFilters={updateFilters} />
     <Grid component="footer" className={classes.footer}>
       <p>Robert Hung 2019</p>
     </Grid>
@@ -29,19 +28,13 @@ const App = ({ classes, filters, updateFilters }) => (
 
 const styles = {
   main: {
-    minHeight: "100vh",
-    backgroundColor: "#282c34"
+    minHeight: "100vh"
   },
   header: {
-    fontSize: "calc(10px + 2vmin)",
-    color: "white"
-  },
-  results: {
-    color: "white"
+    fontSize: "calc(10px + 2vmin)"
   },
   footer: {
-    marginTop: "auto",
-    color: "white"
+    marginTop: "auto"
   }
 };
 
@@ -50,7 +43,8 @@ const initialFilters = {
     ANZ: false,
     CBA: false,
     NAB: false,
-    Westpac: false
+    Westpac: false,
+    AMEX: false
   },
   cardType: {
     VISA: false,

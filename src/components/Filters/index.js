@@ -7,7 +7,7 @@ import { withStyles } from "@material-ui/core/styles";
 import FilterGroup from "../FilterGroup";
 
 const Filters = ({ classes, filters, onToggleFilter }) => (
-  <Grid component="section" container className={classes.filters}>
+  <Grid component="section" container>
     <p>Filters</p>
     <Grid container>
       <FilterGroup
@@ -34,11 +34,7 @@ const Filters = ({ classes, filters, onToggleFilter }) => (
   </Grid>
 );
 
-const styles = {
-  filters: {
-    color: "white"
-  }
-};
+const styles = {};
 
 const handlers = {
   onToggleFilter: ({ filters, updateFilters }) => string => {
