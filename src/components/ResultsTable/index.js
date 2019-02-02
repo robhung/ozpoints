@@ -190,6 +190,7 @@ const ResultsTable = ({
                   <TableCell align="center">
                     <Button
                       variant="contained"
+                      target="_blank"
                       color="secondary"
                       href={card.link}
                       size="small"
