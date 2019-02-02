@@ -10,7 +10,7 @@ import FilterGroup from "../FilterGroup";
 const Filters = ({ classes, filters, onToggleFilter }) => (
   <Grid component="section" container justify="center">
     <p>Filters</p>
-    <Grid container>
+    <Grid container justify="space-around">
       <FilterGroup
         filters={filters.bank}
         label="Bank"

@@ -9,7 +9,17 @@ import Switch from "@material-ui/core/Switch";
 import { withStyles } from "@material-ui/core/styles";
 
 const FilterGroup = ({ classes, filters, label, onToggleFilter, type }) => (
-  <Grid container direction="column" alignItems="center" item xs={6} lg>
+  <Grid
+    container
+    direction="column"
+    alignItems="center"
+    item
+    xs={6}
+    sm={5}
+    md={4}
+    lg={2}
+    className={classes.root}
+  >
     <p>{label}</p>
     <FormGroup>
       {Object.keys(filters).map(filter => (
@@ -29,6 +39,25 @@ const FilterGroup = ({ classes, filters, label, onToggleFilter, type }) => (
   </Grid>
 );
 
-const styles = {};
+const styles = theme => ({
+  root: {
+    border: "black 1px solid",
+    [theme.breakpoints.up("xs")]: {
+      margin: theme.spacing.unit * 0
+    },
+    [theme.breakpoints.up("sm")]: {
+      margin: theme.spacing.unit * 1
+    },
+    [theme.breakpoints.up("md")]: {
+      margin: theme.spacing.unit * 2
+    },
+    [theme.breakpoints.up("lg")]: {
+      margin: theme.spacing.unit * 3
+    },
+    [theme.breakpoints.up("xl")]: {
+      margin: theme.spacing.unit * 4
+    }
+  }
+});
 
 export default withStyles(styles)(FilterGroup);
