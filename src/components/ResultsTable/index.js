@@ -175,8 +175,12 @@ const ResultsTable = ({
                         )
                     )}
                   </TableCell>
-                  <TableCell align="right">{card.promotion.points}</TableCell>
-                  <TableCell align="right">{card.promotion.spend}</TableCell>
+                  <TableCell align="right">
+                    {card.promotion.points.toLocaleString()}
+                  </TableCell>
+                  <TableCell align="right">
+                    {card.promotion.spend.toLocaleString()}
+                  </TableCell>
                   <TableCell align="right">{card.promotion.dayLimit}</TableCell>
                   <TableCell align="right">
                     <span
@@ -191,7 +195,9 @@ const ResultsTable = ({
                   <TableCell align="right">
                     {card.foreign === 0 ? "Waived" : card.foreign}
                   </TableCell>
-                  <TableCell align="right">{card.income}</TableCell>
+                  <TableCell align="right">
+                    {card.income.toLocaleString()}
+                  </TableCell>
                   <TableCell align="right">{card.previous}</TableCell>
                   <TableCell align="right">
                     {Moment(card.promotion.endDate).format("ll")}
