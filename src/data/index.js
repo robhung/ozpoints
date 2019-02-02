@@ -5,7 +5,6 @@ const createData = (
   rewards,
   promotion,
   annual,
-  supplementary,
   foreign,
   income,
   credit,
@@ -18,7 +17,6 @@ const createData = (
   rewards,
   promotion,
   annual,
-  supplementary,
   foreign,
   income,
   credit,
@@ -43,10 +41,6 @@ const cards = [
       fee: 150,
       waived: true
     },
-    {
-      limit: 1,
-      fee: 0
-    },
     3,
     30000,
     6000,
@@ -68,10 +62,6 @@ const cards = [
     {
       fee: 49,
       waived: false
-    },
-    {
-      limit: 4,
-      fee: 0
     },
     3,
     30000,
@@ -95,10 +85,6 @@ const cards = [
       fee: 250,
       waived: false
     },
-    {
-      limit: 1,
-      fee: 0
-    },
     3,
     75000,
     15000,
@@ -120,10 +106,6 @@ const cards = [
     {
       fee: 199,
       waived: false
-    },
-    {
-      limit: 4,
-      fee: 0
     },
     3,
     75000,
