@@ -2,6 +2,7 @@ import React from "react";
 import { compose, withHandlers } from "recompose";
 
 import Grid from "@material-ui/core/Grid";
+
 import { withStyles } from "@material-ui/core/styles";
 
 import FilterGroup from "../FilterGroup";

@@ -4,8 +4,9 @@ import startCase from "lodash/startCase";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Grid from "@material-ui/core/Grid";
-import { withStyles } from "@material-ui/core/styles";
 import Switch from "@material-ui/core/Switch";
+
+import { withStyles } from "@material-ui/core/styles";
 
 const FilterGroup = ({ classes, filters, onToggleFilter, type }) => (
   <Grid container direction="column" alignItems="center" item xs={6} lg>
