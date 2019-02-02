@@ -18,7 +18,7 @@ import cards from "../../data";
 const ResultsTable = ({
   classes,
   filters,
-  filteredIssuer,
+  filteredBank,
   filteredType,
   filteredRewards
 }) => (
@@ -36,8 +36,8 @@ const ResultsTable = ({
             <TableCell align="right">Annual Fee</TableCell>
             <TableCell align="right">Foreign Fee (%)</TableCell>
             <TableCell align="right">Min. Income</TableCell>
-            <TableCell align="right">Previous Holder Limit (Months)</TableCell>
-            <TableCell align="right">Promotion End</TableCell>
+            <TableCell align="right">Previous Holder (Months)</TableCell>
+            <TableCell align="right">Expiry</TableCell>
             <TableCell align="center">Link</TableCell>
           </TableRow>
         </TableHead>
@@ -52,13 +52,13 @@ const ResultsTable = ({
             );
 
             // Conditions
-            const A0 = filteredIssuer.size > 0;
+            const A0 = filteredBank.size > 0;
             const B0 = filteredType.size > 0;
             const C0 = filteredRewards.size > 0;
             const D0 = filters.feesWaived.Annual;
             const E0 = filters.feesWaived.Foreign;
             // Checks
-            const A1 = filteredIssuer.has(card.issuer);
+            const A1 = filteredBank.has(card.bank);
             const B1 = filteredType.has(card.type);
             const C1 = cardRewardsHasFilter.has(true);
             const D1 = D0 && card.annual.waived;
@@ -159,7 +159,7 @@ const ResultsTable = ({
               showCard && (
                 <TableRow key={index}>
                   <TableCell component="th" scope="row">
-                    {`${card.issuer} ${card.name}`}
+                    {card.name}
                   </TableCell>
                   <TableCell align="right">{card.type}</TableCell>
                   <TableCell align="right">
@@ -234,8 +234,8 @@ const styles = theme => ({
 export default compose(
   withStyles(styles),
   withProps(({ filters }) => {
-    const filteredIssuer = new Set(
-      Object.entries(filters.issuer)
+    const filteredBank = new Set(
+      Object.entries(filters.bank)
         .filter(([key, value]) => value)
         .map(([key]) => key)
     );
@@ -251,7 +251,7 @@ export default compose(
     );
 
     return {
-      filteredIssuer,
+      filteredBank,
       filteredType,
       filteredRewards
     };

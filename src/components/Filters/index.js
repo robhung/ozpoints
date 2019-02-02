@@ -12,10 +12,10 @@ const Filters = ({ classes, filters, onToggleFilter }) => (
     <p>Filters</p>
     <Grid container>
       <FilterGroup
-        filters={filters.issuer}
-        label="Card Issuer"
+        filters={filters.bank}
+        label="Bank"
         onToggleFilter={onToggleFilter}
-        type="issuer"
+        type="bank"
       />
       <FilterGroup
         filters={filters.type}

@@ -1,5 +1,5 @@
 const createData = (
-  issuer,
+  bank,
   name,
   type,
   rewards,
@@ -10,7 +10,7 @@ const createData = (
   previous,
   link
 ) => ({
-  issuer,
+  bank,
   name,
   type,
   rewards,
@@ -24,29 +24,29 @@ const createData = (
 
 const cards = [
   createData(
-    "Westpac",
-    "Altitude Platinum",
-    "VISA",
-    [{ type: "Qantas", fee: 50 }, { type: "Flexible", fee: 0 }],
+    "AMEX",
+    "AMEX Altitude Black (Westpac Bundle)",
+    "AMEX",
+    [{ type: "Qantas", fee: 0 }],
     {
-      points: 60000,
+      points: 40000,
       spend: 3000,
       dayLimit: 90,
       startDate: "2018-11-28",
       endDate: "2019-04-02"
     },
     {
-      fee: 150,
-      waived: true
+      fee: 199,
+      waived: false
     },
     3,
-    30000,
+    75000,
     12,
-    "https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-platinum/"
+    "https://www.westpac.com.au/personal-banking/credit-cards/reward/americanexpress-black/"
   ),
   createData(
     "AMEX",
-    "Altitude Platinum (Westpac Bundle)",
+    "AMEX Altitude Platinum (Westpac Bundle)",
     "AMEX",
     [{ type: "Qantas", fee: 0 }],
     {
@@ -66,8 +66,50 @@ const cards = [
     "https://www.westpac.com.au/personal-banking/credit-cards/reward/americanexpress-platinum/"
   ),
   createData(
+    "StGeorge",
+    "St. George Amplify Signature",
+    "VISA",
+    [{ type: "Qantas", fee: 0 }],
+    {
+      points: 80000,
+      spend: 4000,
+      dayLimit: 90,
+      startDate: "2019-01-21",
+      endDate: "2019-03-06"
+    },
+    {
+      fee: 279,
+      waived: true
+    },
+    3,
+    75000,
+    12,
+    "https://www.stgeorge.com.au/personal/credit-cards/affiliate/amplify-signature/qantasexclusive?cid=sc%3Acc%3AFY19_1901%3Aoth%3Aqf%3Adtop&promoCode=Q2"
+  ),
+  createData(
+    "StGeorge",
+    "St. George Amplify Signature",
+    "VISA",
+    [{ type: "Flexible", fee: 0 }],
+    {
+      points: 100000,
+      spend: 12000,
+      dayLimit: 365,
+      startDate: "2019-01-24",
+      endDate: "2019-05-22"
+    },
+    {
+      fee: 179,
+      waived: false
+    },
+    3,
+    75000,
+    12,
+    "https://www.stgeorge.com.au/personal/credit-cards/rewards/amplify-signature"
+  ),
+  createData(
     "Westpac",
-    "Altitude Black",
+    "Westpac Altitude Black",
     "Mastercard",
     [{ type: "Qantas", fee: 50 }, { type: "Flexible", fee: 0 }],
     {
@@ -87,25 +129,25 @@ const cards = [
     "https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-black/"
   ),
   createData(
-    "AMEX",
-    "Altitude Black (Westpac Bundle)",
-    "AMEX",
-    [{ type: "Qantas", fee: 0 }],
+    "Westpac",
+    "Westpac Altitude Platinum",
+    "VISA",
+    [{ type: "Qantas", fee: 50 }, { type: "Flexible", fee: 0 }],
     {
-      points: 40000,
+      points: 60000,
       spend: 3000,
       dayLimit: 90,
       startDate: "2018-11-28",
       endDate: "2019-04-02"
     },
     {
-      fee: 199,
-      waived: false
+      fee: 150,
+      waived: true
     },
     3,
-    75000,
+    30000,
     12,
-    "https://www.westpac.com.au/personal-banking/credit-cards/reward/americanexpress-black/"
+    "https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-platinum/"
   )
 ];
 
