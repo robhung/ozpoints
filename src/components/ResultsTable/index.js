@@ -167,7 +167,7 @@ const ResultsTable = ({
                     {card.rewards.map(
                       (reward, i) =>
                         i > 0 ? (
-                          <span>
+                          <span key={i}>
                             <br />
                             {reward.type} ({reward.fee})
                           </span>
