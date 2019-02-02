@@ -49,7 +49,7 @@ const cards = [
   ),
   createData(
     "AMEX",
-    "Altitude Platinum",
+    "Altitude Platinum (Westpac Bundle)",
     "AMEX",
     [{ type: "Qantas", fee: 0 }],
     {
@@ -93,7 +93,7 @@ const cards = [
   ),
   createData(
     "AMEX",
-    "Altitude Black",
+    "Altitude Black (Westpac Bundle)",
     "AMEX",
     [{ type: "Qantas", fee: 0 }],
     {
