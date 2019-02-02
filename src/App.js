@@ -49,10 +49,12 @@ const styles = theme => ({
     fontSize: "calc(10px + 2vmin)"
   },
   about: {
-    textAlign: "center",
     marginTop: "auto",
     marginLeft: "10%",
-    marginRight: "10%"
+    marginRight: "10%",
+    [theme.breakpoints.up("lg")]: {
+      textAlign: "center"
+    }
   },
   footer: {
     marginBottom: theme.spacing.unit * 3
