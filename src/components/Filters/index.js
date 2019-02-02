@@ -30,10 +30,10 @@ const Filters = ({ classes, filters, onToggleFilter }) => (
         type="rewards"
       />
       <FilterGroup
-        filters={filters.waived}
+        filters={filters.feesWaived}
         label="Fees Waived"
         onToggleFilter={onToggleFilter}
-        type="waived"
+        type="feesWaived"
       />
     </Grid>
   </Grid>

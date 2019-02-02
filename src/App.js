@@ -44,24 +44,23 @@ const initialFilters = {
     ANZ: false,
     CBA: false,
     NAB: false,
-    westpac: false,
+    Westpac: false,
     AMEX: false
   },
   type: {
     VISA: false,
-    mastercard: false,
-    dinersClub: false,
-    AMEX: false
+    Mastercard: false,
+    AMEX: false,
+    DinersClub: false
   },
   rewards: {
-    qantas: false,
-    velocity: false,
-    flexible: false
+    Qantas: false,
+    Velocity: false,
+    Flexible: false
   },
-  waived: {
-    annual: false,
-    foreign: false,
-    supplementary: false
+  feesWaived: {
+    Annual: false,
+    Foreign: false
   }
 };
 
