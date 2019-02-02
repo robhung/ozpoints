@@ -12,24 +12,28 @@ const Filters = ({ classes, filters, onToggleFilter }) => (
     <p>Filters</p>
     <Grid container>
       <FilterGroup
-        filters={filters}
+        filters={filters.issuer}
+        label="Card Issuer"
         onToggleFilter={onToggleFilter}
-        type="cardIssuer"
+        type="issuer"
       />
       <FilterGroup
-        filters={filters}
+        filters={filters.type}
+        label="Card Type"
         onToggleFilter={onToggleFilter}
-        type="cardType"
+        type="type"
       />
       <FilterGroup
-        filters={filters}
+        filters={filters.rewards}
+        label="Rewards"
         onToggleFilter={onToggleFilter}
         type="rewards"
       />
       <FilterGroup
-        filters={filters}
+        filters={filters.waived}
+        label="Fees Waived"
         onToggleFilter={onToggleFilter}
-        type="feesWaived"
+        type="waived"
       />
     </Grid>
   </Grid>
@@ -38,18 +42,14 @@ const Filters = ({ classes, filters, onToggleFilter }) => (
 const styles = {};
 
 const handlers = {
-  onToggleFilter: ({ filters, updateFilters }) => string => {
-    const [filterType, filter] = string.split(".");
-    const boolean = filters[filterType][filter];
-
+  onToggleFilter: ({ filters, updateFilters }) => (type, filter) =>
     updateFilters({
       ...filters,
-      [filterType]: {
-        ...filters[filterType],
-        [filter]: !boolean
+      [type]: {
+        ...filters[type],
+        [filter]: !filters[type][filter]
       }
-    });
-  }
+    })
 };
 
 export default compose(

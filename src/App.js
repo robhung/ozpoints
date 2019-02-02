@@ -40,28 +40,28 @@ const styles = {
 };
 
 const initialFilters = {
-  cardIssuer: {
+  issuer: {
     ANZ: false,
     CBA: false,
     NAB: false,
-    Westpac: false,
+    westpac: false,
     AMEX: false
   },
-  cardType: {
+  type: {
     VISA: false,
-    Mastercard: false,
-    DinersClub: false,
+    mastercard: false,
+    dinersClub: false,
     AMEX: false
   },
   rewards: {
-    Qantas: false,
-    Velocity: false,
-    Flexible: false
+    qantas: false,
+    velocity: false,
+    flexible: false
   },
-  feesWaived: {
-    FirstYearAnnual: false,
-    International: false,
-    Supplemantary: false
+  waived: {
+    annual: false,
+    foreign: false,
+    supplementary: false
   }
 };
 
