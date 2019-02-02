@@ -35,6 +35,8 @@ const ResultsTable = ({
             <TableCell align="right">Days To Spend</TableCell>
             <TableCell align="right">Annual Fee</TableCell>
             <TableCell align="right">Foreign Fee (%)</TableCell>
+            <TableCell align="right">Min. Income</TableCell>
+            <TableCell align="right">Previous Holder Limit (Months)</TableCell>
             <TableCell align="right">Promotion End</TableCell>
             <TableCell align="center">Link</TableCell>
           </TableRow>
@@ -163,9 +165,14 @@ const ResultsTable = ({
                   <TableCell align="right">
                     {card.rewards.map(
                       (reward, i) =>
-                        i > 0
-                          ? `, ${reward.type} (${reward.fee})`
-                          : `${reward.type} (${reward.fee})`
+                        i > 0 ? (
+                          <span>
+                            <br />
+                            {reward.type} ({reward.fee})
+                          </span>
+                        ) : (
+                          `${reward.type} (${reward.fee})`
+                        )
                     )}
                   </TableCell>
                   <TableCell align="right">{card.promotion.points}</TableCell>
@@ -184,6 +191,8 @@ const ResultsTable = ({
                   <TableCell align="right">
                     {card.foreign === 0 ? "Waived" : card.foreign}
                   </TableCell>
+                  <TableCell align="right">{card.income}</TableCell>
+                  <TableCell align="right">{card.previous}</TableCell>
                   <TableCell align="right">
                     {Moment(card.promotion.endDate).format("ll")}
                   </TableCell>
