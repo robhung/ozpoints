@@ -32,7 +32,6 @@ const cards = [
       points: 40000,
       spend: 3000,
       dayLimit: 90,
-      startDate: "2018-11-28",
       endDate: "2019-04-02"
     },
     {
@@ -53,7 +52,6 @@ const cards = [
       points: 15000,
       spend: 3000,
       dayLimit: 90,
-      startDate: "2018-11-28",
       endDate: "2019-04-02"
     },
     {
@@ -66,6 +64,26 @@ const cards = [
     "https://www.westpac.com.au/personal-banking/credit-cards/reward/americanexpress-platinum/"
   ),
   createData(
+    "AMEX",
+    "AMEX Velocity Platinum",
+    "AMEX",
+    [{ type: "Velocity", fee: 0 }],
+    {
+      points: 100000,
+      spend: 3000,
+      dayLimit: 90,
+      endDate: "2019-02-18"
+    },
+    {
+      fee: 375,
+      waived: false
+    },
+    3,
+    65000,
+    18,
+    "https://www.americanexpress.com/au/compare-velocity-cards/?cpid=100331967"
+  ),
+  createData(
     "StGeorge",
     "St. George Amplify Signature",
     "VISA",
@@ -74,7 +92,6 @@ const cards = [
       points: 80000,
       spend: 4000,
       dayLimit: 90,
-      startDate: "2019-01-21",
       endDate: "2019-03-06"
     },
     {
@@ -95,17 +112,16 @@ const cards = [
       points: 100000,
       spend: 12000,
       dayLimit: 365,
-      startDate: "2019-01-24",
-      endDate: "2019-05-22"
+      endDate: "2019-03-06"
     },
     {
       fee: 179,
-      waived: false
+      waived: true
     },
     3,
     75000,
     12,
-    "https://www.stgeorge.com.au/personal/credit-cards/rewards/amplify-signature"
+    "https://www.pointhacks.com.au/credit-cards/stgeorge-amplify-signature-amplify-rewards-guide/"
   ),
   createData(
     "Westpac",
@@ -116,7 +132,6 @@ const cards = [
       points: 80000,
       spend: 3000,
       dayLimit: 90,
-      startDate: "2018-11-28",
       endDate: "2019-04-02"
     },
     {
@@ -137,7 +152,6 @@ const cards = [
       points: 60000,
       spend: 3000,
       dayLimit: 90,
-      startDate: "2018-11-28",
       endDate: "2019-04-02"
     },
     {
