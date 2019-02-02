@@ -30,14 +30,15 @@ const ResultsTable = ({
             <TableCell>Card</TableCell>
             <TableCell align="right">Type</TableCell>
             <TableCell align="right">Rewards Program (Fee)</TableCell>
-            <TableCell align="right">Bonus Points</TableCell>
-            <TableCell align="right">Spend Required</TableCell>
+            <TableCell align="right">Promo Points</TableCell>
+            <TableCell align="right">Promo Extras</TableCell>
+            <TableCell align="right">Spend Required ($)</TableCell>
             <TableCell align="right">Days To Spend</TableCell>
             <TableCell align="right">Annual Fee</TableCell>
             <TableCell align="right">Foreign Fee (%)</TableCell>
             <TableCell align="right">Min. Income</TableCell>
             <TableCell align="right">Previous Holder (Months)</TableCell>
-            <TableCell align="right">Expiry</TableCell>
+            <TableCell align="right">Promo Expiry</TableCell>
             <TableCell align="center">Link</TableCell>
           </TableRow>
         </TableHead>
@@ -177,6 +178,11 @@ const ResultsTable = ({
                   </TableCell>
                   <TableCell align="right">
                     {card.promotion.points.toLocaleString()}
+                  </TableCell>
+                  <TableCell align="right">
+                    {card.promotion.extras.map(
+                      (extra, i) => (i > 0 ? `, ${extra}` : extra)
+                    )}
                   </TableCell>
                   <TableCell align="right">
                     {card.promotion.spend.toLocaleString()}

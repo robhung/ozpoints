@@ -28,7 +28,7 @@ const App = ({ classes, filters, updateFilters }) => (
       </p>
       <p>
         Any data such as interest rates, subsequent annual fees, repayment
-        periods etc. have been ignored.
+        periods, etc. have been ignored.
       </p>
       <p>
         It is advised to cancel these cards immediately after you receive your
