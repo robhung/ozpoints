@@ -7,7 +7,6 @@ const createData = (
   annual,
   foreign,
   income,
-  credit,
   previous,
   link
 ) => ({
@@ -19,7 +18,6 @@ const createData = (
   annual,
   foreign,
   income,
-  credit,
   previous,
   link
 });
@@ -43,7 +41,6 @@ const cards = [
     },
     3,
     30000,
-    6000,
     12,
     "https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-platinum/"
   ),
@@ -65,7 +62,6 @@ const cards = [
     },
     3,
     30000,
-    3000,
     12,
     "https://www.westpac.com.au/personal-banking/credit-cards/reward/americanexpress-platinum/"
   ),
@@ -87,7 +83,6 @@ const cards = [
     },
     3,
     75000,
-    15000,
     12,
     "https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-black/"
   ),
@@ -109,7 +104,6 @@ const cards = [
     },
     3,
     75000,
-    6000,
     12,
     "https://www.westpac.com.au/personal-banking/credit-cards/reward/americanexpress-black/"
   )
