@@ -8,7 +8,7 @@ import { withStyles } from "@material-ui/core/styles";
 import FilterGroup from "../FilterGroup";
 
 const Filters = ({ classes, filters, onToggleFilter }) => (
-  <Grid component="section" container>
+  <Grid component="section" container justify="center">
     <p>Filters</p>
     <Grid container>
       <FilterGroup
