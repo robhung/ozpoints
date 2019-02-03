@@ -13,25 +13,29 @@ const Filters = ({ classes, filters, onToggleFilter }) => (
     <Grid container justify="space-around">
       <FilterGroup
         filters={filters.bank}
-        label="Bank"
+        header="Bank"
+        labels={labels.bank}
         onToggleFilter={onToggleFilter}
         type="bank"
       />
       <FilterGroup
         filters={filters.type}
-        label="Card Type"
+        header="Card Type"
+        labels={labels.type}
         onToggleFilter={onToggleFilter}
         type="type"
       />
       <FilterGroup
         filters={filters.rewards}
-        label="Rewards"
+        header="Rewards"
+        labels={labels.rewards}
         onToggleFilter={onToggleFilter}
         type="rewards"
       />
       <FilterGroup
         filters={filters.feesWaived}
-        label="Fees Waived"
+        header="Fees Waived"
+        labels={labels.feesWaived}
         onToggleFilter={onToggleFilter}
         type="feesWaived"
       />
@@ -40,6 +44,15 @@ const Filters = ({ classes, filters, onToggleFilter }) => (
 );
 
 const styles = {};
+
+// NB: Manual decleration of filter order as Safari & iOS was shifting the 
+// toggled filter to the bottom, as per onToggleFilter handler
+const labels = {
+  bank: ["ANZ", "CBA", "NAB", "Westpac", "StGeorge", "AMEX"],
+  type: ["VISA", "Mastercard", "AMEX", "DinersClub"],
+  rewards: ["Qantas", "Velocity", "Flexible"],
+  feesWaived: ["Annual", "Foreign"]
+};
 
 const handlers = {
   onToggleFilter: ({ filters, updateFilters }) => (type, filter) =>

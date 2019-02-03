@@ -8,7 +8,14 @@ import Switch from "@material-ui/core/Switch";
 
 import { withStyles } from "@material-ui/core/styles";
 
-const FilterGroup = ({ classes, filters, label, onToggleFilter, type }) => (
+const FilterGroup = ({
+  classes,
+  header,
+  filters,
+  labels,
+  onToggleFilter,
+  type
+}) => (
   <Grid
     container
     direction="column"
@@ -20,9 +27,9 @@ const FilterGroup = ({ classes, filters, label, onToggleFilter, type }) => (
     lg={2}
     className={classes.root}
   >
-    <p>{label}</p>
+    <p>{header}</p>
     <FormGroup>
-      {Object.keys(filters).map(filter => (
+      {labels.map(filter => (
         <FormControlLabel
           key={filter}
           control={
