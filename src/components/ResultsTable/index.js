@@ -1,19 +1,19 @@
-import React from "react";
-import { compose, withProps } from "recompose";
-import Moment from "moment";
+import React from 'react';
+import { compose, withProps } from 'recompose';
+import Moment from 'moment';
 
-import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
 
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles } from '@material-ui/core/styles';
 
-import cards from "../../data";
+import cards from '../../data';
 
 const ResultsTable = ({
   classes,
@@ -43,7 +43,7 @@ const ResultsTable = ({
           </TableRow>
         </TableHead>
         <TableBody>
-          {cards.map((card, index) => {
+          {cards.map(card => {
             let showCard = true;
 
             // TODO: Refactor Logic
@@ -158,30 +158,29 @@ const ResultsTable = ({
 
             return (
               showCard && (
-                <TableRow key={index}>
+                <TableRow key={cards.name}>
                   <TableCell component="th" scope="row">
                     {card.name}
                   </TableCell>
                   <TableCell align="right">{card.type}</TableCell>
                   <TableCell align="right">
-                    {card.rewards.map(
-                      (reward, i) =>
-                        i > 0 ? (
-                          <span key={i}>
-                            <br />
-                            {reward.type} ({reward.fee})
-                          </span>
-                        ) : (
-                          `${reward.type} (${reward.fee})`
-                        )
+                    {card.rewards.map((reward, rewardIndex) =>
+                      rewardIndex > 0 ? (
+                        <span key={reward.type}>
+                          <br />
+                          {reward.type} ({reward.fee})
+                        </span>
+                      ) : (
+                        `${reward.type} (${reward.fee})`
+                      )
                     )}
                   </TableCell>
                   <TableCell align="right">
                     {card.promotion.points.toLocaleString()}
                   </TableCell>
                   <TableCell align="right">
-                    {card.promotion.extras.map(
-                      (extra, i) => (i > 0 ? `, ${extra}` : extra)
+                    {card.promotion.extras.map((extra, i) =>
+                      i > 0 ? `, ${extra}` : extra
                     )}
                   </TableCell>
                   <TableCell align="right">
@@ -196,17 +195,17 @@ const ResultsTable = ({
                     >
                       {card.annual.fee}
                     </span>
-                    {card.annual.waived && " (0)"}
+                    {card.annual.waived && ' (0)'}
                   </TableCell>
                   <TableCell align="right">
-                    {card.foreign === 0 ? "Waived" : card.foreign}
+                    {card.foreign === 0 ? 'Waived' : card.foreign}
                   </TableCell>
                   <TableCell align="right">
                     {card.income.toLocaleString()}
                   </TableCell>
                   <TableCell align="right">{card.previous}</TableCell>
                   <TableCell align="right">
-                    {Moment(card.promotion.endDate).format("ll")}
+                    {Moment(card.promotion.endDate).format('ll')}
                   </TableCell>
                   <TableCell align="center">
                     <Button
@@ -231,15 +230,15 @@ const ResultsTable = ({
 
 const styles = theme => ({
   paper: {
-    width: "100%",
-    overflowX: "auto",
+    width: '100%',
+    overflowX: 'auto',
     margin: theme.spacing.unit * 3
   },
   table: {
     minWidth: 700
   },
   waived: {
-    textDecoration: "line-through"
+    textDecoration: 'line-through'
   }
 });
 
@@ -248,17 +247,17 @@ export default compose(
   withProps(({ filters }) => {
     const filteredBank = new Set(
       Object.entries(filters.bank)
-        .filter(([key, value]) => value)
+        .filter(([, value]) => value)
         .map(([key]) => key)
     );
     const filteredType = new Set(
       Object.entries(filters.type)
-        .filter(([key, value]) => value)
+        .filter(([, value]) => value)
         .map(([key]) => key)
     );
     const filteredRewards = new Set(
       Object.entries(filters.rewards)
-        .filter(([key, value]) => value)
+        .filter(([, value]) => value)
         .map(([key]) => key)
     );
 

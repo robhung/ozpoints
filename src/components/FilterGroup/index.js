@@ -1,12 +1,12 @@
-import React from "react";
-import startCase from "lodash/startCase";
+import React from 'react';
+import startCase from 'lodash/startCase';
 
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Grid from "@material-ui/core/Grid";
-import Switch from "@material-ui/core/Switch";
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Grid from '@material-ui/core/Grid';
+import Switch from '@material-ui/core/Switch';
 
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles } from '@material-ui/core/styles';
 
 const FilterGroup = ({
   classes,
@@ -48,20 +48,20 @@ const FilterGroup = ({
 
 const styles = theme => ({
   root: {
-    border: "black 1px solid",
-    [theme.breakpoints.up("xs")]: {
+    border: 'black 1px solid',
+    [theme.breakpoints.up('xs')]: {
       margin: theme.spacing.unit * 0
     },
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up('sm')]: {
       margin: theme.spacing.unit * 1
     },
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up('md')]: {
       margin: theme.spacing.unit * 2
     },
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up('lg')]: {
       margin: theme.spacing.unit * 3
     },
-    [theme.breakpoints.up("xl")]: {
+    [theme.breakpoints.up('xl')]: {
       margin: theme.spacing.unit * 4
     }
   }

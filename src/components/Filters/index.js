@@ -1,13 +1,22 @@
-import React from "react";
-import { compose, withHandlers } from "recompose";
+import React from 'react';
+import { compose, withHandlers } from 'recompose';
 
-import Grid from "@material-ui/core/Grid";
+import Grid from '@material-ui/core/Grid';
 
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles } from '@material-ui/core/styles';
 
-import FilterGroup from "../FilterGroup";
+import FilterGroup from '../FilterGroup';
 
-const Filters = ({ classes, filters, onToggleFilter }) => (
+// NB: Manual decleration of filter order as Safari & iOS was shifting the
+// toggled filter to the bottom, as per onToggleFilter handler
+const labels = {
+  bank: ['ANZ', 'CBA', 'NAB', 'Westpac', 'StGeorge', 'AMEX'],
+  type: ['VISA', 'Mastercard', 'AMEX', 'DinersClub'],
+  rewards: ['Qantas', 'Velocity', 'Flexible'],
+  feesWaived: ['Annual', 'Foreign']
+};
+
+const Filters = ({ filters, onToggleFilter }) => (
   <Grid component="section" container justify="center">
     <p>Filters</p>
     <Grid container justify="space-around">
@@ -44,15 +53,6 @@ const Filters = ({ classes, filters, onToggleFilter }) => (
 );
 
 const styles = {};
-
-// NB: Manual decleration of filter order as Safari & iOS was shifting the 
-// toggled filter to the bottom, as per onToggleFilter handler
-const labels = {
-  bank: ["ANZ", "CBA", "NAB", "Westpac", "StGeorge", "AMEX"],
-  type: ["VISA", "Mastercard", "AMEX", "DinersClub"],
-  rewards: ["Qantas", "Velocity", "Flexible"],
-  feesWaived: ["Annual", "Foreign"]
-};
 
 const handlers = {
   onToggleFilter: ({ filters, updateFilters }) => (type, filter) =>

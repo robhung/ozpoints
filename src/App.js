@@ -1,12 +1,12 @@
-import React from "react";
-import { compose, withState } from "recompose";
+import React from 'react';
+import { compose, withState } from 'recompose';
 
-import Grid from "@material-ui/core/Grid";
+import Grid from '@material-ui/core/Grid';
 
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles } from '@material-ui/core/styles';
 
-import Filters from "./components/Filters";
-import ResultsTable from "./components/ResultsTable";
+import Filters from './components/Filters';
+import ResultsTable from './components/ResultsTable';
 
 const App = ({ classes, filters, updateFilters }) => (
   <Grid
@@ -43,17 +43,17 @@ const App = ({ classes, filters, updateFilters }) => (
 
 const styles = theme => ({
   main: {
-    minHeight: "100vh"
+    minHeight: '100vh'
   },
   header: {
-    fontSize: "calc(10px + 2vmin)"
+    fontSize: 'calc(10px + 2vmin)'
   },
   about: {
-    marginTop: "auto",
-    marginLeft: "10%",
-    marginRight: "10%",
-    [theme.breakpoints.up("lg")]: {
-      textAlign: "center"
+    marginTop: 'auto',
+    marginLeft: '10%',
+    marginRight: '10%',
+    [theme.breakpoints.up('lg')]: {
+      textAlign: 'center'
     }
   },
   footer: {
@@ -89,5 +89,5 @@ const initialFilters = {
 
 export default compose(
   withStyles(styles),
-  withState("filters", "updateFilters", initialFilters)
+  withState('filters', 'updateFilters', initialFilters)
 )(App);
