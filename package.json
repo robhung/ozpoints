@@ -17,8 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "react-scripts build && firebase deploy",
-    "precommit": "NODE_ENV=production lint-staged"
+    "deploy": "react-scripts build && firebase deploy"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -26,6 +25,11 @@
       "eslint src/ --fix",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
