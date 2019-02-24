@@ -158,7 +158,7 @@ const ResultsTable = ({
 
             return (
               showCard && (
-                <TableRow key={cards.name}>
+                <TableRow key={`${card.name} ${card.rewards[0].type}`}>
                   <TableCell component="th" scope="row">
                     {card.name}
                   </TableCell>
