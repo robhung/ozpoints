@@ -179,9 +179,11 @@ const ResultsTable = ({
                     {card.promotion.points.toLocaleString()}
                   </TableCell>
                   <TableCell align="right">
-                    {card.promotion.extras.map((extra, i) =>
-                      i > 0 ? `, ${extra}` : extra
-                    )}
+                    {card.promotion.extras.length > 0
+                      ? card.promotion.extras.map((extra, i) =>
+                          i > 0 ? `, ${extra}` : extra
+                        )
+                      : '---'}
                   </TableCell>
                   <TableCell align="right">
                     {card.promotion.spend.toLocaleString()}
