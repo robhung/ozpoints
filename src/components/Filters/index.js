@@ -18,7 +18,6 @@ const labels = {
 
 const Filters = ({ filters, onToggleFilter }) => (
   <Grid component="section" container justify="center">
-    <p>Filters</p>
     <Grid container justify="space-around">
       <FilterGroup
         filters={filters.bank}

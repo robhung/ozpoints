@@ -158,7 +158,7 @@ const ResultsTable = ({
 
             return (
               showCard && (
-                <TableRow key={cards.name}>
+                <TableRow key={`${card.name} ${card.rewards[0].type}`}>
                   <TableCell component="th" scope="row">
                     {card.name}
                   </TableCell>
@@ -179,9 +179,11 @@ const ResultsTable = ({
                     {card.promotion.points.toLocaleString()}
                   </TableCell>
                   <TableCell align="right">
-                    {card.promotion.extras.map((extra, i) =>
-                      i > 0 ? `, ${extra}` : extra
-                    )}
+                    {card.promotion.extras.length > 0
+                      ? card.promotion.extras.map((extra, i) =>
+                          i > 0 ? `, ${extra}` : extra
+                        )
+                      : '---'}
                   </TableCell>
                   <TableCell align="right">
                     {card.promotion.spend.toLocaleString()}
