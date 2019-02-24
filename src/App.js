@@ -2,6 +2,7 @@ import React from 'react';
 import { compose, withState } from 'recompose';
 
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 import { MuiThemeProvider, withStyles } from '@material-ui/core/styles';
 
@@ -19,8 +20,20 @@ const App = ({ classes, filters, updateFilters }) => (
       alignItems="center"
       className={classes.main}
     >
-      <Grid component="header" className={classes.header}>
-        <p>OzPoints</p>
+      <Grid
+        component="header"
+        container
+        justify="center"
+        className={classes.headerWrapper}
+      >
+        <Grid className={classes.header}>
+          <Typography variant="h3" className={classes.oz}>
+            Oz
+          </Typography>
+          <Typography variant="h3" className={classes.points}>
+            Points
+          </Typography>
+        </Grid>
       </Grid>
       <Filters filters={filters} updateFilters={updateFilters} />
       <ResultsTable filters={filters} updateFilters={updateFilters} />
@@ -49,8 +62,44 @@ const styles = {
   main: {
     minHeight: '100vh'
   },
+  headerWrapper: {
+    [theme.breakpoints.up('sm')]: {
+      padding: '32px 0px'
+    }
+  },
   header: {
-    fontSize: 'calc(10px + 2vmin)'
+    padding: '12px 8px',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    [theme.breakpoints.only('xs')]: {
+      width: '100%'
+    },
+    [theme.breakpoints.up('sm')]: {
+      borderRadius: 5
+    },
+    background: theme.palette.primary.main
+  },
+  oz: {
+    border: `${theme.palette.common.white} 5px solid`,
+    borderRadius: 5,
+    color: theme.palette.common.white,
+    fontWeight: theme.typography.fontWeightMedium,
+    [theme.breakpoints.only('xs')]: {
+      border: `${theme.palette.common.white} 2.5px solid`,
+      lineHeight: theme.typography.h5.lineHeight,
+      fontSize: theme.typography.h5.fontSize,
+      letterSpacing: theme.typography.h5.letterSpacing
+    }
+  },
+  points: {
+    color: theme.palette.common.white,
+    fontWeight: theme.typography.fontWeightMedium,
+    [theme.breakpoints.only('xs')]: {
+      lineHeight: theme.typography.h5.lineHeight,
+      fontSize: theme.typography.h5.fontSize,
+      letterSpacing: theme.typography.h5.letterSpacing
+    }
   },
   about: {
     marginTop: 'auto',
