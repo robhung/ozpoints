@@ -1,22 +1,10 @@
-# OzPoints
+# OzPoints [![CircleCI](https://circleci.com/gh/robhung/ozpoints/tree/master.svg?style=svg)](https://circleci.com/gh/robhung/ozpoints)
 
-### Directory Layout
+This project was made for comparing credit cards in Australia which offer a sign up bonus.
 
-```shell
-.
-├── /node_modules/                # Third-party libraries and utilities
-├── /build/                       # Project compiled for production
-├── /public/                      # Static files such as favicon.ico etc.
-├── /src/                         # Source files to be compiled
-│   ├── /components               # Components
-│   ├── /containers               # Containers
-│   ├── App.js                    # App
-│   ├── index.js                  # Initial component to render the virtual DOM
-│   ├── serviceWorker.js          # Service worker script to allow offline features
-│   └── /...                      # etc.
-│── package.json                  # The list of project dependencies and NPM scripts
-└── yarn.lock                     # Lockfile for yarn to install dependencies in order
-```
+Motivated to help consumers maximise their frequent flyer points with minimal spending.
+
+Inspired by [OzBargain](https://www.ozbargain.com.au) and [MadFientest](http://madfientist.cardratings.com/).
 
 ### Getting Started
 
@@ -37,7 +25,7 @@ $ yarn start                    # Same as `npm start`
 Launch the test runner in the interactive watch mode.
 
 ```shell
-$ yarn test                    # Same as `npm run start`
+$ yarn test                     # Same as `npm run start`
 ```
 
 ### Build
@@ -51,8 +39,14 @@ $ yarn build                    # Same as `npm run build`
 ### Deployment
 
 ```shell
-$ firebase deploy
+$ firebase deploy               # Requires authentication
 ```
+
+### Continous Integration 
+
+CI and CD is run through [CircleCI](https://circleci.com/gh/robhung/ozpoints) and can be configured [here]('./.circleci/config.yml').
+
+For all pull requests, it will run linters and tests. On `master` branch, it will automatically build and deploy to Firebase.
 
 ### Create-React-App
 
