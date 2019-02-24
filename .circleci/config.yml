@@ -79,7 +79,7 @@ workflows:
     jobs:
       - lint
       - test
-      - build-deploy
+      - build-deploy:
           requires:
             - lint
             - test
