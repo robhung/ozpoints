@@ -19,7 +19,7 @@ const theme = createMuiTheme({
   palette: {
     common: {
       black: '#333',
-      white: 'F8F8FF'
+      white: '#F8F8FF'
     },
     primary: ozBargainTheme,
     secondary: grey,
@@ -33,7 +33,8 @@ const theme = createMuiTheme({
     tonalOffset: 0.2
   },
   typography: {
-    useNextVariants: true
+    useNextVariants: true,
+    fontWeightHeavy: 600
   }
 });
 
