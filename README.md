@@ -42,9 +42,9 @@ $ yarn build                    # Same as `npm run build`
 $ firebase deploy               # Requires authentication
 ```
 
-### Continous Integration 
+### Continous Integration
 
-CI and CD is run through [CircleCI](https://circleci.com/gh/robhung/ozpoints) and can be configured [here]('./.circleci/config.yml').
+CI and CD is run through [CircleCI](https://circleci.com/gh/robhung/ozpoints) and can be configured [here](./.circleci/config.yml).
 
 For all pull requests, it will run linters and tests. On `master` branch, it will automatically build and deploy to Firebase.
 
