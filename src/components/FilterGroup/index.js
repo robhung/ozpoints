@@ -57,13 +57,17 @@ const styles = theme => ({
       margin: theme.spacing.unit * 0
     },
     [theme.breakpoints.up('sm')]: {
-      margin: theme.spacing.unit * 1
+      margin: theme.spacing.unit * 1,
+      borderRadius: 5
     },
     background: theme.palette.primary.lighter
   },
   header: {
     width: '100%',
-    background: theme.palette.primary.light
+    background: theme.palette.primary.light,
+    [theme.breakpoints.up('sm')]: {
+      borderRadius: 5
+    }
   },
   headerText: {
     [theme.breakpoints.up('xs')]: {
