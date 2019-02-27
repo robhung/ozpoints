@@ -9,7 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import { withStyles } from '@material-ui/core/styles';
 
 const ResultsTableRow = ({ card, classes }) => (
-  <TableRow key={`${card.name} ${card.rewards[0].type}`}>
+  <TableRow>
     <TableCell component="th" scope="row">
       {card.name}
     </TableCell>

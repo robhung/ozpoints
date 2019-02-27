@@ -1,5 +1,4 @@
 import React from 'react';
-import { compose, withProps } from 'recompose';
 
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -76,29 +75,4 @@ const styles = theme => ({
   },
 });
 
-export default compose(
-  withStyles(styles),
-  withProps(({ filters }) => {
-    const filteredBank = new Set(
-      Object.entries(filters.bank)
-        .filter(([, value]) => value)
-        .map(([key]) => key)
-    );
-    const filteredType = new Set(
-      Object.entries(filters.type)
-        .filter(([, value]) => value)
-        .map(([key]) => key)
-    );
-    const filteredRewards = new Set(
-      Object.entries(filters.rewards)
-        .filter(([, value]) => value)
-        .map(([key]) => key)
-    );
-
-    return {
-      filteredBank,
-      filteredType,
-      filteredRewards,
-    };
-  })
-)(ResultsTable);
+export default withStyles(styles)(ResultsTable);
