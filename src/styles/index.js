@@ -12,14 +12,14 @@ const ozBargainTheme = {
   mainLighter: '#e69c53',
   mainLight: '#d9934e',
   main: '#cd6702',
-  dark: '#8f4801'
+  dark: '#8f4801',
 };
 
 const theme = createMuiTheme({
   palette: {
     common: {
       black: '#333',
-      white: '#F8F8FF'
+      white: '#F8F8FF',
     },
     primary: ozBargainTheme,
     secondary: grey,
@@ -30,12 +30,12 @@ const theme = createMuiTheme({
     // Used to shift a color's luminance by approximately
     // two indexis within its tonal palette.
     // E.g., shift from Red 500 to Red 300 or Red 700.
-    tonalOffset: 0.2
+    tonalOffset: 0.2,
   },
   typography: {
     useNextVariants: true,
-    fontWeightHeavy: 600
-  }
+    fontWeightHeavy: 600,
+  },
 });
 
 export default theme;
