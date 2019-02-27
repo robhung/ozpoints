@@ -10,12 +10,13 @@ import CheckFilter from '../CheckFilter';
 import ResultsListItem from '../ResultsListItem';
 
 const ResultsList = ({
+  classes,
   filters,
   filteredBank,
   filteredType,
   filteredRewards,
 }) => (
-  <Grid component="section" container>
+  <Grid component="section" container className={classes.wrapper}>
     {cards.map(card => (
       <CheckFilter
         key={`${card.name} ${card.rewards[0].type}`}
@@ -31,6 +32,10 @@ const ResultsList = ({
   </Grid>
 );
 
-const styles = {};
+const styles = theme => ({
+  wrapper: {
+    padding: `${theme.spacing.unit * 3}px 0px`,
+  },
+});
 
 export default withStyles(styles)(ResultsList);
