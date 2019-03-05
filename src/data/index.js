@@ -19,7 +19,7 @@ const createData = (
   foreign,
   income,
   previous,
-  link
+  link,
 });
 
 const cards = [
@@ -33,11 +33,11 @@ const cards = [
       extras: ['Lounge Pass'],
       spend: 3000,
       dayLimit: 90,
-      endDate: '2019-04-02'
+      endDate: '2019-04-02',
     },
     {
       fee: 199,
-      waived: false
+      waived: false,
     },
     3,
     75000,
@@ -54,11 +54,11 @@ const cards = [
       extras: [],
       spend: 3000,
       dayLimit: 90,
-      endDate: '2019-04-02'
+      endDate: '2019-04-02',
     },
     {
       fee: 49,
-      waived: false
+      waived: false,
     },
     3,
     30000,
@@ -71,15 +71,15 @@ const cards = [
     'AMEX',
     [{ type: 'Velocity', fee: 0 }],
     {
-      points: 100000,
+      points: 50000,
       extras: ['Domestic Flight', 'Lounge Pass'],
       spend: 3000,
       dayLimit: 90,
-      endDate: '2019-02-18'
+      endDate: '',
     },
     {
       fee: 375,
-      waived: false
+      waived: false,
     },
     3,
     65000,
@@ -96,11 +96,11 @@ const cards = [
       extras: ['Domestic Flight', 'Lounge Pass'],
       spend: 1500,
       dayLimit: 90,
-      endDate: '2019-02-28'
+      endDate: '2019-03-14',
     },
     {
       fee: 225,
-      waived: false
+      waived: false,
     },
     0,
     35000,
@@ -117,11 +117,11 @@ const cards = [
       extras: ['Lounge Pass'],
       spend: 4000,
       dayLimit: 90,
-      endDate: '2019-03-06'
+      endDate: '2019-03-06',
     },
     {
       fee: 279,
-      waived: true
+      waived: true,
     },
     3,
     75000,
@@ -138,11 +138,11 @@ const cards = [
       extras: ['Lounge Pass'],
       spend: 12000,
       dayLimit: 365,
-      endDate: '2019-03-06'
+      endDate: '2019-03-06',
     },
     {
       fee: 179,
-      waived: true
+      waived: true,
     },
     3,
     75000,
@@ -159,11 +159,11 @@ const cards = [
       extras: ['Lounge Pass'],
       spend: 3000,
       dayLimit: 90,
-      endDate: '2019-04-02'
+      endDate: '2019-04-02',
     },
     {
       fee: 250,
-      waived: false
+      waived: false,
     },
     3,
     75000,
@@ -180,17 +180,17 @@ const cards = [
       extras: [],
       spend: 3000,
       dayLimit: 90,
-      endDate: '2019-04-02'
+      endDate: '2019-04-02',
     },
     {
       fee: 150,
-      waived: true
+      waived: true,
     },
     3,
     30000,
     12,
     'https://www.westpac.com.au/personal-banking/credit-cards/reward/altitude-platinum/'
-  )
+  ),
 ];
 
 export default cards;
