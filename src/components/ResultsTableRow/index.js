@@ -50,7 +50,9 @@ const ResultsTableRow = ({ card, classes }) => (
     <TableCell align="right">{card.income.toLocaleString()}</TableCell>
     <TableCell align="right">{card.previous}</TableCell>
     <TableCell align="right">
-      {Moment(card.promotion.endDate).format('ll')}
+      {card.promotion.endDate
+        ? Moment(card.promotion.endDate).format('ll')
+        : '---'}
     </TableCell>
     <TableCell align="center">
       <Button

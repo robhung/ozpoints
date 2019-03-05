@@ -207,7 +207,11 @@ const ResultsListItem = ({ card, classes, open, updateOpen }) => (
             <ListItemText
               inset
               primary="Promo Expiry"
-              secondary={Moment(card.promotion.endDate).format('ll')}
+              secondary={
+                card.promotion.endDate
+                  ? Moment(card.promotion.endDate).format('ll')
+                  : '---'
+              }
               secondaryTypographyProps={{
                 className: classes.listItemTextSecondary,
                 variant: 'body1',
