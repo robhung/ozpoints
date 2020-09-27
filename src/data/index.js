@@ -33,7 +33,7 @@ const cards = [
       extras: ['Lounge Pass'],
       spend: 3000,
       dayLimit: 90,
-      endDate: '2019-04-02',
+      endDate: new Date(2019, 3, 2),
     },
     {
       fee: 199,
@@ -54,7 +54,7 @@ const cards = [
       extras: [],
       spend: 3000,
       dayLimit: 90,
-      endDate: '2019-04-02',
+      endDate: new Date(2019, 3, 2),
     },
     {
       fee: 49,
@@ -96,7 +96,7 @@ const cards = [
       extras: ['Domestic Flight', 'Lounge Pass'],
       spend: 1500,
       dayLimit: 90,
-      endDate: '2019-03-14',
+      endDate: new Date(2019, 2, 14),
     },
     {
       fee: 225,
@@ -117,7 +117,7 @@ const cards = [
       extras: ['Lounge Pass'],
       spend: 4000,
       dayLimit: 90,
-      endDate: '2019-03-06',
+      endDate: new Date(2019, 2, 6),
     },
     {
       fee: 279,
@@ -138,7 +138,7 @@ const cards = [
       extras: ['Lounge Pass'],
       spend: 12000,
       dayLimit: 365,
-      endDate: '2019-03-06',
+      endDate: new Date(2019, 2, 6),
     },
     {
       fee: 179,
@@ -153,13 +153,16 @@ const cards = [
     'Westpac',
     'Westpac Altitude Black',
     'Mastercard',
-    [{ type: 'Qantas', fee: 50 }, { type: 'Flexible', fee: 0 }],
+    [
+      { type: 'Qantas', fee: 50 },
+      { type: 'Flexible', fee: 0 },
+    ],
     {
       points: 80000,
       extras: ['Lounge Pass'],
       spend: 3000,
       dayLimit: 90,
-      endDate: '2019-04-02',
+      endDate: new Date(2019, 3, 2),
     },
     {
       fee: 250,
@@ -174,13 +177,16 @@ const cards = [
     'Westpac',
     'Westpac Altitude Platinum',
     'VISA',
-    [{ type: 'Qantas', fee: 50 }, { type: 'Flexible', fee: 0 }],
+    [
+      { type: 'Qantas', fee: 50 },
+      { type: 'Flexible', fee: 0 },
+    ],
     {
       points: 60000,
       extras: [],
       spend: 3000,
       dayLimit: 90,
-      endDate: '2019-04-02',
+      endDate: new Date(2019, 3, 2),
     },
     {
       fee: 150,

@@ -34,7 +34,7 @@ const ResultsList = ({
 
 const styles = theme => ({
   wrapper: {
-    padding: `${theme.spacing.unit * 3}px 0px`,
+    padding: `${theme.spacing(3)}px 0px`,
   },
 });
 

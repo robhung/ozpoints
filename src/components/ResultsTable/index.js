@@ -65,7 +65,7 @@ const styles = theme => ({
   paper: {
     width: '100%',
     overflowX: 'auto',
-    margin: theme.spacing.unit * 3,
+    margin: theme.spacing(3),
   },
   table: {
     minWidth: 700,
